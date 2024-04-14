@@ -1,8 +1,10 @@
 :root {
   --clr-primary-blue-300: hsl(215, 51%, 70%);
+  --clr-primary-blue-600: hsl(216, 21%, 33%);
   --clr-secondary-cyan-400: hsl(178, 100%, 50%);
   --clr-natural-blue-800: hsl(217, 54%, 11%);
   --clr-natural-blue-700: hsl(216, 50%, 16%);
+  /* --clr-natural-blue-600 */
   --clr-natural-white-100: hsl(0, 0%, 100%);
 
   --ff-base: "Outfit", sans-serif;
@@ -51,8 +53,108 @@ h6 {
 #root {
   isolation: isolate;
 }
+html,
+body {
+  height: 100%;
+}
 
 body {
-  line-height: 1;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-blue-300);
+  background-color: var(--clr-natural-blue-800);
+
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--clr-natural-blue-700);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.2rem;
+  border-radius: 1rem;
+  max-width: 375px;
+}
+
+.preview-img {
+  border-radius: 0.7rem;
+}
+
+.header {
+  color: var(--clr-natural-white-100);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.description {
+  font-weight: var(--fw-middle);
+  font-size: 1.1rem;
+}
+
+.flex-group-price {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.price {
+  color: var(--clr-secondary-cyan-400);
+  font-weight: var(--fw-bold);
+  font-size: 1.08rem;
+}
+
+.days-remain {
+  font-weight: var(--fw-middle);
+  font-size: 1.08rem;
+}
+
+.price[data-price="eth-symbol"]::before {
+  content: "";
+  display: inline-block;
+  background-image: url("./assets//icon-ethereum.svg");
+  width: 11px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+.days-remain[data-time="time-icon"]::before {
+  content: "";
+  display: inline-block;
+  background-image: url("./assets//icon-clock.svg");
+  width: 17px;
+  height: 17px;
+  margin-right: 0.5rem;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--clr-primary-blue-600);
+  border: none;
+}
+
+.flex-group-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-group-author .author-img {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  outline: var(--clr-natural-white-100) 1px solid;
+}
+
+.flex-group-author .author-name {
+  font-size: 1.065rem;
+  font-weight: var(--fw-middle);
+}
+.author-name span {
+  color: var(--clr-natural-white-100);
 }
