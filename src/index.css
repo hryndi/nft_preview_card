@@ -1,0 +1,58 @@
+:root {
+  --clr-primary-blue-300: hsl(215, 51%, 70%);
+  --clr-secondary-cyan-400: hsl(178, 100%, 50%);
+  --clr-natural-blue-800: hsl(217, 54%, 11%);
+  --clr-natural-blue-700: hsl(216, 50%, 16%);
+  --clr-natural-white-100: hsl(0, 0%, 100%);
+
+  --ff-base: "Outfit", sans-serif;
+
+  --fw-regular: 300;
+  --fw-middle: 400;
+  --fw-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root {
+  isolation: isolate;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
